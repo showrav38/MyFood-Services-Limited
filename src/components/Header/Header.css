@@ -1,0 +1,16 @@
+.header{
+    padding: 20px;
+    background-color:#212529;
+}
+#textMain{
+    color:rgb(245, 149, 84);
+  }
+  .textExtra{
+      color:white;
+  }
+
+  .service-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr)};
+
+   

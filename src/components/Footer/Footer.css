@@ -1,0 +1,25 @@
+.im{
+    height:50px;
+    width:50px;
+    margin-top:30px ;
+}
+.bg{
+    background-color: #9fa0a1;
+   
+}
+
+
+@media only screen and (max-width:688px) {
+    .bg{
+        background-color: #9fa0a1;
+       
+       
+    }
+}
+@media only screen and (min-width:689px) and (max-width: 991px){
+    .bg{
+        background-color: #9fa0a1;
+        margin-left: 25px ;
+       
+    }
+}

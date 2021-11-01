@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Steak & Shrimp Burrito",
+        "img": "https://demo.hasthemes.com/aahar-preview/aahar/images/banner/details/1.jpg",
+        "price": 480,
+        "Rating": 3.5,
+        "makingTime": 20,
+        "availableTime": "9AM-6PM",
+        "shopName": "Ching Long Restora",
+        "description": " The best Mexican food in San Diego came from the hole-in-the-wall taco stands"
+    },
+    {
+        "name": "Beef Burger",
+        "img": "https://demo.hasthemes.com/aahar-preview/aahar/images/beef/1.jpg",
+        "price": 380,
+        "Rating": 4.0,
+        "makingTime": 15,
+        "availableTime": "11AM-6PM",
+        "shopName": "American Burger",
+        "description": "A food, typically considered a sandwich, consisting of one or more cooked patties—usually ground meat, typically beef—placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled"
+    },
+    {
+        "name": "Chicken Masala",
+        "img": "https://demo.hasthemes.com/aahar-preview/aahar/images/beef/2.jpg",
+        "price": 250,
+        "Rating": 4.5,
+        "makingTime": 15,
+        "availableTime": "9AM-8PM",
+        "shopName": "Bhorta Bari",
+        "description": "Chicken tikka masala is a dish consisting of roasted marinated chicken chunks (chicken tikka) in spiced curry sauce. The curry is usually creamy and orange-coloured"
+    },
+    {
+        "name": "Chaow Mein",
+        "img": "https://demo.hasthemes.com/aahar-preview/aahar/images/beef/3.jpg",
+        "price": 220,
+        "Rating": 4.2,
+        "makingTime": 10,
+        "availableTime": "11AM-11PM",
+        "shopName": "Cafe 00",
+        "description": "The fried noodles then cook with the other components so the flavors marry, the fried crispy noodles soften slightly in the sauce, and the fried taste of the noodles permeates the whole dish. This gives chow mein it's characteristic chewy texture and fried flavor."
+    },
+    {
+        "name": "Teheri",
+        "img": "https://kitchenofdebjani.com/wp-content/uploads/2017/10/Untitled-1-1-1.jpg",
+        "price": 300,
+        "Rating": 4.5,
+        "makingTime": 15,
+        "availableTime": "10AM-4PM",
+        "shopName": "American Restro",
+        "description": "Where meat was hard to find, the cooks of the royal kitchen substituted mutton with potatoes, and thus was born tehri. Unlike pulav or biryani, tehri is neither rich nor ceremonial, but an ordinary meal for ordinary"
+    },
+    {
+        "name": "Indian Kacchi",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJxJFEyENdmHFnW-P1deiIkybnMkXpz3Nu4ABi4r75xAIaSqIZwmCwp-zescBkHIWuB0&usqp.jpg",
+        "price": 350,
+        "Rating": 4.7,
+        "makingTime": 20,
+        "availableTime": "11AM-3PM",
+        "shopName": "Kacchi Bhai",
+        "description": "The term 'kacchi' means 'raw' but don't worry, you won't be served uncooked biryani. Rather, the kacchi-style of cooking, which is also known as kacchi yeqni, refers to the method of cooking all the raw elements together in one pot."
+    }
+]

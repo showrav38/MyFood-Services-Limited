@@ -1,0 +1,26 @@
+
+
+.text-C{
+    color:rgb(247, 109, 11);
+    padding-top: 10px;
+}
+
+.textP{
+    margin:10px;
+    padding-left: 30px;
+    font-size: larger;
+color:rgb(41, 40, 40)
+}
+@media only screen and (max-width:688px) {
+   iframe{
+       width:auto;
+   }
+}
+@media only screen and (min-width:689px) and (max-width: 991px){
+    iframe{
+        width:auto;
+    }
+    .textP{
+        align-items: center;
+    }
+}

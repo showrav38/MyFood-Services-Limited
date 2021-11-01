@@ -1,0 +1,22 @@
+.textColor{
+    color:rgb(18, 19, 17);
+  }
+
+  .backColor{
+      background-color: lightblue;
+  }
+
+  @media only screen and (max-width:688px) {
+    .backColor{
+      width:100%;
+      
+    }
+   
+}
+@media only screen and (min-width:689px) and (max-width: 991px){
+    .backColor{
+        width:100%;
+      
+      }
+  
+}

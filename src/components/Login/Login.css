@@ -1,0 +1,17 @@
+.login-container{
+    margin-bottom: 100px;
+    }
+    
+    .button{
+        border: none;
+        background-color: white;
+        
+    }
+    .google-icon{
+        font-size: 2.2em;
+        color: rgb(43, 43, 212);
+    }
+    .google-icon:hover{
+        color: blue;
+       
+    }
