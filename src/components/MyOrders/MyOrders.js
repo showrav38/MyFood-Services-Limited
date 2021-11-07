@@ -39,7 +39,7 @@ const MyOrders = () => {
   };
 
   return (
-    <div className="pt-4 bt-4 mt-4 fw-bolder">
+    <div className="pt-4 bt-4 mt-4 fw-bolder bccol">
       <h2 className="pt-4 bt-4 mt-4 ">My Orders</h2>
       {/* <ul className="list-group "> */}
       <table className="table w-75 mx-auto">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
@@ -7,10 +7,13 @@ import useData from '../../hooks/useData';
 import './BookingDetail.css';
 
 const BookingDetail = props => {
+  console.log(props.show);
   const { user } = useAuth();
   const history = useHistory();
 
-  console.log(props.show);
+  const addressRef = useRef();
+  const contactRef = useRef();
+
   const { _id, name, img, description, price, availableTime, makingTime, shopName } = props.show;
   const newUser = { name, img, description, price };
   newUser.userNameWhoOrdered = user.displayName;
@@ -22,7 +25,11 @@ const BookingDetail = props => {
   // const [services] = useData();
   // const [order, setOrder] = useState([]);
 
-  const Booked = () => {
+  const handleAddUser = e => {
+    const address = addressRef.current.value;
+    const contact = contactRef.current.value;
+    newUser.userAddress = address;
+    newUser.userContact = contact;
     fetch('https://young-springs-85818.herokuapp.com/orders', {
       method: 'POST',
       headers: {
@@ -37,6 +44,7 @@ const BookingDetail = props => {
           history.push('/');
         }
       });
+    e.preventDefault();
   };
   return (
     <div>
@@ -46,29 +54,57 @@ const BookingDetail = props => {
             className="resPaddN"
             style={{
               fontSize: 'larger',
-              width: '350px',
-              height: '850px',
               backgroundColor: '#A3CFF9',
             }}
           >
-            <Card.Img style={{ height: '300px' }} variant="top" src={img} />
+            <Card.Img className='img-fluid mx-auto'style={{height:'30vh',width:'40vw'}} variant="top" src={img} />
             <Card.Body>
-              <Card.Title className="bg-white">{name}</Card.Title>
-              <Card.Text style={{ color: 'goldenrod', fontWeight: 'bold', width: '300px' }}>
-                {description}
-              </Card.Text>
-              <Card.Title>{price}BDT </Card.Title>
+              <Card.Title className="bg-white fw-bold">{name}</Card.Title>
+              <Card.Title style={{ color: 'goldenrod', fontWeight: 'bold' }}>
+                Price: {price} BDT{' '}
+              </Card.Title>
               <Card.Title>Available: {availableTime}</Card.Title>
               <Card.Title>Making Time: {makingTime}Min.</Card.Title>
               <Card.Title>Shop Name: {shopName}</Card.Title>
-              {/* <Card.Text className="fw-bold fs-5">Location: {location}</Card.Text>
-                            <Card.Text>Batch: {batch}</Card.Text>
-                            <Card.Text style={{ width: '330px', height: '140px', }}>
-                                {studyBackground}
-                            </Card.Text> */}
-              <Button onClick={Booked} variant="primary">
-                Booking
-              </Button>{' '}
+              <br />
+              <Card.Text className='text-center' style={{ fontWeight: 'bold' }}>{description}</Card.Text>
+              <div className="bg-secondary bg-opacity-50">
+                <Card.Text style={{ fontWeight: 'bold' }}>
+                  User Name <br />
+                  <span className="text-white"> {user.displayName}</span>
+                </Card.Text>
+                <Card.Text style={{ fontWeight: 'bold' }}>
+                  User email <br />
+                  <span className="text-white">{user.email}</span>
+                </Card.Text>
+              </div>
+              <form onSubmit={handleAddUser} className="row g-3 ">
+                <div class="col">
+                  <label for="inputName4" class="form-label">
+                    Address
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputName4"
+                    ref={addressRef}
+                    required
+                  />
+                  <label for="inputContact4" class="form-label">
+                    Contact
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputContact4"
+                    ref={contactRef}
+                    required
+                  />
+                  <button type="submit" class="btn btn-primary mt-3">
+                    Place Order
+                  </button>
+                </div>
+              </form>
             </Card.Body>
           </Card>
         </Col>

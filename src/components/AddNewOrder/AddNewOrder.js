@@ -38,7 +38,7 @@ const AddNewOrder = () => {
     e.preventDefault();
   };
   return (
-    <div className="pt-4 bt-4 mt-4 fw-bolder bg-secondary">
+    <div className="pt-4 bt-4 mt-4 fw-bolder bg-secondary bccol">
       <h2 className="pt-4 bt-4 mt-4">Add New Food Item</h2>
       <form onSubmit={handleAddUser} className="row g-3 p-4 b-4 m-4">
         <div class="col-md-6">
