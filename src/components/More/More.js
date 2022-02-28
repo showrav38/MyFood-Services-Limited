@@ -69,14 +69,14 @@ const More = () => {
             <Row className=" text-C b-4">
               <Col xs={12} md={12} className="p-2">
                 <h2> Running Offer(30% OFF)</h2>
-                <div className="container">
+                <div className="container inner">
                   <img
                     className="paddingImg"
                     src="https://northcentralhealthdistrict.org/wp-content/uploads/2013/09/food-banner.jpg"
                     alt="Snow"
                     width="450px"
                     height="400px"
-                    style={{opacity:'100'}}
+                    style={{opacity:'100',borderRadius:'30px',overflow:'hidden'}}
                   />
                 </div>
               </Col>

@@ -7,64 +7,137 @@ import useAuth from '../../hooks/useAuth';
 
 import './Login.css';
 
-
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [comment, setComment] = useState('');
+  const { signInUsingEmailandPassword, user, error, setUser, setError, loading, setLoading } =
+    useAuth();
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [comment, setComment] = useState('');
-    const { signInUsingEmailandPassword, user, error, setUser, setError, loading, setLoading } = useAuth();
+  // taking location for redirecting
+  const location = useLocation();
+  const redirect_url = location.state?.from || '/home';
 
-    // taking location for redirecting 
-    const location = useLocation();
-    const redirect_url = location.state?.from || '/home';
+  const history = useHistory();
 
-    const history = useHistory();
+  const handleGoogleLoginRedirect = () => {
+    signInWithGoogle()
+      .then(result => {
+        console.log(result);
+        setUser(result.user);
+        history.push(redirect_url);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
-    const handleGoogleLoginRedirect = () => {
-        signInWithGoogle()
-            .then(result => {
-                console.log(result);
-                setUser(result.user);
-                history.push(redirect_url);
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-    }
+  const handleEmailChange = e => {
+    setEmail(e.target.value);
+  };
+  const handlePasswordChange = e => {
+    setPassword(e.target.value);
+  };
+  const handleLogin = e => {
+    //to prevent reloading/refreshh after clicking or submitting
+    e.preventDefault();
+    console.log(email, password);
+    signInUsingEmailandPassword(email, password)
+      .then(userCredential => {
+        setUser(userCredential.user);
+        history.push(redirect_url);
+        setComment('');
+      })
+      .catch(error => {
+        setComment('Wrong Email/Password');
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
-    const handleEmailChange = e => {
-        setEmail(e.target.value);
-    }
-    const handlePasswordChange = e => {
-        setPassword(e.target.value);
-    }
-    const handleLogin = e => {
-        //to prevent reloading/refreshh after clicking or submitting
-        e.preventDefault();
-        console.log(email, password);
-        signInUsingEmailandPassword(email, password)
-            .then((userCredential) => {
-                setUser(userCredential.user);
-                history.push(redirect_url);
-                setComment('');
-            })
-            .catch((error) => {
-                setComment('Wrong Email/Password');
-            })
-            .finally(() => {
-                setLoading(false);
-            })
-            ;
+  const googleIcon = <FontAwesomeIcon icon={faGoogle} />;
+  const { signInWithGoogle } = useAuth();
+  return (
+    <div className="body">
+      <div class="container">
+        <div class="row px-3">
+          <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+            <div class="img-left d-none d-md-flex"></div>
+            <div class="card-body">
+              <h4 class="titles text-center mt-4">Login into account</h4>
+              <form onClick={handleLogin} class="form-box px-3">
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                  <input onBlur={handleEmailChange} type="email" name="" placeholder="Email Address" tabindex="10" required />
+                </div>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-key"></i>
+                  </span>
+                  <input onBlur={handlePasswordChange} type="password" name="" placeholder="Password" required />
+                </div>
 
-    }
+                <div class="mb-3">
+                  <hr class="my-4" />
 
+                  <div class="text-center mb-2">
+                    Don't have an account?
+                    <a href="#" class="register-link">
+                      Register here
+                    </a>
+                  </div>
+                </div>
 
-    const googleIcon = <FontAwesomeIcon icon={faGoogle} />;
-    const { signInWithGoogle } = useAuth();
-    return (
-        <div >
-            <div className="login-container mt-4 bt-5 pt-4">
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-block text-uppercase">
+                    Login
+                  </button>
+                </div>
+
+                <div class="text-right">
+                  <a href="#" class="forget-link">
+                    Forget Password?
+                  </a>
+                </div>
+
+                <div class="text-center mb-3">or login with</div>
+
+                <div class="row mb-3">
+                  <div class="col-4">
+                    <a href="#" class="btn btn-block btn-social btn-facebook">
+                      facebook
+                    </a>
+                  </div>
+
+                  <div class="col-4">
+                    <a onClick={handleGoogleLoginRedirect} href="#" class="btn btn-block btn-social btn-google">
+                      google
+                    </a>
+                  </div>
+
+                  <div class="col-4">
+                    <a href="#" class="btn btn-block btn-social btn-twitter">
+                      twitter
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
+/*-----------------------------------------------------------------------  */
+// eslint-disable-next-line no-lone-blocks
+{
+  /* <div className="login-container mt-4 bt-5 pt-4">
                 <h2 className="display-5 text-primary mt-4 bt-5 pt-4">Please Login</h2>
                 <div className="login-form">
                     <div>
@@ -99,15 +172,9 @@ const Login = () => {
 
                 <h3 className="fw-light text-success mt-5">Not Registered?</h3>
                 <Link to="/register">Click Here to Register</Link>
-            </div>
-        </div>
-    );
-};
-
-export default Login;
-
-
-
+            </div> */
+}
+// ------------------------------------------------------------------------------------------
 // import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import React, { useState } from 'react';
@@ -116,14 +183,13 @@ export default Login;
 // import './Login.css';
 // import useAuth from '../../hooks/useAuth';
 
-
 // const Login = () => {
 
 //     const [email, setEmail] = useState('');
 //     const [password, setPassword] = useState('');
 //     const { signInUsingEmailandPassword, user, setUser, setError, error } = useAuth();
 
-//     // taking location for redirecting 
+//     // taking location for redirecting
 //     const location = useLocation();
 //     const redirect_url = location.state?.from || '/home';
 
@@ -158,7 +224,6 @@ export default Login;
 //             });;
 
 //     }
-
 
 //     const googleIcon = <FontAwesomeIcon icon={faGoogle} />;
 //     const { signInWithGoogle } = useAuth();
@@ -205,4 +270,3 @@ export default Login;
 // };
 
 // export default Login;
-

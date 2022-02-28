@@ -13,25 +13,25 @@ const Header = () => {
                     <NavLink as={Link} to="/" style={{ textDecoration: 'none' }}><h3 className="textExtra"><span id="textMain"> MyFood </span>Services</h3></NavLink>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-center bg-dark">
-                        <Nav.Link as={HashLink} to="/home#home" style={{ margin: '10px', textDecoration: 'none', color: 'white' }} >Home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#home" style={{ marginRight: '10px',marginTop:'-23px',textDecoration: 'none', fontWeight: "normal", color: 'white' }} >Home</Nav.Link>
 
                         {user?.displayName ?
                             <div class="container">
                                 <div class="row">
                                     <div class="col">
-                                        <Nav.Link as={Link} to="/myOrders" style={{ textDecoration: 'none', color: 'white' }}
+                                        <Nav.Link as={Link} to="/myOrders" style={{ margin: '10px', textDecoration: 'none', fontWeight: "normal", color: 'white' }}
                                         >My Order</Nav.Link>
                                     </div>
                                     <div class="col">
-                                        <NavLink as={Link} to="/manage" style={{ textDecoration: 'none', color: 'white' }}
+                                        <NavLink as={Link} to="/manage" style={{ margin: '10px', textDecoration: 'none', fontWeight: "normal", color: 'white' }}
                                         >Manage Order</NavLink>
                                     </div>
                                     <div class="col">
-                                        <NavLink as={Link} to="/addService" style={{ textDecoration: 'none', color: 'white' }}
+                                        <NavLink as={Link} to="/addService" style={{ margin: '10px', textDecoration: 'none', fontWeight: "normal", color: 'white' }}
                                         >Add Services</NavLink>
                                     </div>
                                     <div class="col">
-                                        <Button onClick={logOut} variant="light">Logout</Button>
+                                        <Button style={{ margin: '10px', textDecoration: 'none', fontWeight: "normal"}} onClick={logOut} variant="light">Logout</Button>
                                     </div>
                                 </div>
                                 {/* <Button onClick={logOut} variant="light">Manage Orders</Button>
@@ -39,11 +39,11 @@ const Header = () => {
                                 <Button onClick={logOut} variant="light">Logout</Button> */}
                             </div>
                             :
-                            <NavLink as={Link} to="/login" style={{ margin: '10px', textDecoration: 'none', fontWeight: "bold", color: 'goldenrod' }}
+                            <NavLink as={Link} to="/login" style={{ marginRight: '10px',marginTop: '-23px',textDecoration: 'none', fontWeight: "normal", color: 'white' }}
                             >Login</NavLink>}
                         <Navbar.Text>
                             {user.displayName &&
-                                <a href="/login" style={{ textDecoration: 'none', paddingLeft: '5px', color: 'yellow', fontWeight: 'bold' }}>User:{user?.displayName}</a>}
+                                <a href="/login" style={{ margin: '10px', textDecoration: 'none', fontWeight: "normal", color: 'white' }}>User:{user?.displayName}</a>}
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
