@@ -1,28 +1,27 @@
-.backgroundServices{
+.backgroundServices {
   background-color: rgb(226, 241, 241);
-  width:100%;
+  width: 100%;
 }
-.textCol{
-  color:black;
+.textCol {
+  color: black;
 }
-@media only screen and (max-width:688px) {
-  .service-container{
-      grid-template-columns: repeat(1, 1fr);
-      padding-left:0px;
+@media only screen and (max-width: 688px) {
+  .service-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 0px;
   }
-  .backgroundServices{
-    background-color:#4e4e4e;
-    width:100%;
+  .backgroundServices {
+    background-color: rgb(226, 241, 241);
+    width: 100%;
   }
 }
-@media only screen and (min-width:689px) and (max-width: 991px){
-  .service-container{
-      grid-template-columns: repeat(2, 1fr);
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .service-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .backgroundServices{
-    background-color:#4e4e4e;
-    width:100%;
-   
+  .backgroundServices {
+    background-color: rgb(226, 241, 241);
+    width: 100%;
   }
 }

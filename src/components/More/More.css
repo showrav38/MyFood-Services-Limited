@@ -19,10 +19,22 @@
     opacity: 1;
   }
 
-  @media only screen and (max-width:688px) {
+  @media only screen and (max-width:768px) {
     .paddingImg{
      padding-right:120px;
-       
-       
+    }
+    .imgal img{
+      opacity: 100;
+    /* border-radius: 154px; */
+    /* overflow: hidden; */
+    width: 300px;
+    margin: 0 auto;
+    margin-left: 46px;
+    height: 180px;
+    padding: 0;
+    margin: 0;
     }
 }
+      /* width: 300px !important;
+      height: 300px !important; */
+  

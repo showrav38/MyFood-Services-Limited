@@ -9,13 +9,14 @@ const Service = props => {
   return (
     <div className="col-md-4 col-sm-6 d-flex justify-content-center fon">
       <div
-        className="border-primary p-1 btn-custom text-center shadow"
+        className="border-primary heg p-1 btn-custom text-center shadow"
         style={{
           height: '550px',
           width: '310px',
           marginBottom: '40px',
           borderRadius: '10px',
           backgroundColor: '#fff',
+          position: 'relative',
         }}
       >
         {/* all details information */}
@@ -31,7 +32,19 @@ const Service = props => {
         <p>Discovered: {_id}</p>
         <p>{description}</p>
         {/* <p>Learning Level: {topInnovation}</p> */}
-        <h4 className="mb-5">Price: {price}</h4>
+        <h4
+          style={{
+            height: '10px',
+            position: 'absolute',
+            bottom: '12px',
+            left: '96px',
+            margin: '0',
+            padding: '0',
+          }}
+          className="mb-5 ress"
+        >
+          Price: {price}Tk
+        </h4>
         <div
           className="hovs d-flex justify-content-center my-auto btn-position"
           style={{ borderRadius: '4px' }}

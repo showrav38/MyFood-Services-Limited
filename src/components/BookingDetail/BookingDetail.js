@@ -58,7 +58,7 @@ const BookingDetail = props => {
     e.preventDefault();
   };
   return (
-    <div className='fon'>
+    <div className="fon">
       <div>
         <Col className="mx-auto my-5 py-5">
           <Card
@@ -66,35 +66,64 @@ const BookingDetail = props => {
             style={{
               fontSize: 'larger',
               backgroundColor: '#ffff',
-              borderRadius:'none'
+              borderRadius: 'none',
             }}
           >
             <Card.Img
               className="img-fluid mx-auto"
-              style={{ height: '40vh', width: '40vw',marginTop:'40px',opacity:'1',borderRadius:'10px' }}
+              style={{
+                height: '40vh',
+                width: '40vw',
+                marginTop: '40px',
+                opacity: '1',
+                borderRadius: '10px',
+              }}
               variant="top"
               src={img}
             />
             <Card.Body>
               <Card.Title className="bg-white fw-bold">{name}</Card.Title>
-              <Card.Title style={{ color: 'goldenrod', fontWeight: 'bold',borderRadius:'none' }}>
+              <Card.Title style={{ color: 'goldenrod', fontWeight: 'bold', borderRadius: 'none' }}>
                 Price: {price} BDT{' '}
               </Card.Title>
-              <Card.Text style={{ fontWeight: 'bold', width: '300px',textAlign:'center',margin:'0 auto' }}>{description}</Card.Text>
-              <br/>
-              <div className="bg-warning bg-opacity-50">
-                <Card.Text style={{ fontWeight: 'bold', width: '300px',display:'inline' }}>
-                  User Name:
-                  <span className="text-white"> {user.displayName}</span>
-                  <br/>
-                </Card.Text>
-                <Card.Text style={{ fontWeight: 'bold', width: '300px',display:'inline' }}>
-                  User email:
-                  <span className="text-white">{user.email}</span>
-                </Card.Text>
-              </div>
-              <form onSubmit={handleAddUser} className="row g-3 ">
+              <Card.Text
+                style={{
+                  fontWeight: '500',
+                  width: '60%',
+                  textAlign: 'center',
+                  margin: '0 auto',
+                }}
+              >
+                {description}
+              </Card.Text>
+              <br />
+              
+              <form onSubmit={handleAddUser} style={{width:'70%',margin:'0 auto'}} className="row g-3 ">
                 <div class="col">
+                  <label for="inputName4" class="form-label">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputName4"
+                    value={user.displayName}
+                    ref={addressRef}
+                    required
+                    style={{ color: 'black',marginBottom:'30px' }}
+                  />
+                   <label for="inputName4" class="form-label">
+                    Email
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputName4"
+                    value={user.email}
+                    ref={addressRef}
+                    required
+                    style={{ color: 'black' ,marginBottom:'30px'}}
+                  />
                   <label for="inputName4" class="form-label">
                     Address
                   </label>
@@ -102,8 +131,10 @@ const BookingDetail = props => {
                     type="text"
                     class="form-control"
                     id="inputName4"
+                    // value={user.displayName}
                     ref={addressRef}
                     required
+                    style={{ color: 'black',marginBottom:'30px' }}
                   />
                   <label for="inputContact4" class="form-label">
                     Contact

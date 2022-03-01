@@ -71,13 +71,26 @@ const Login = () => {
                   <span>
                     <i class="fa fa-envelope-o"></i>
                   </span>
-                  <input onBlur={handleEmailChange} type="email" name="" placeholder="Email Address" tabindex="10" required />
+                  <input
+                    onBlur={handleEmailChange}
+                    type="email"
+                    name=""
+                    placeholder="Email Address"
+                    tabindex="10"
+                    required
+                  />
                 </div>
                 <div class="form-input">
                   <span>
                     <i class="fa fa-key"></i>
                   </span>
-                  <input onBlur={handlePasswordChange} type="password" name="" placeholder="Password" required />
+                  <input
+                    onBlur={handlePasswordChange}
+                    type="password"
+                    name=""
+                    placeholder="Password"
+                    required
+                  />
                 </div>
 
                 <div class="mb-3">
@@ -85,9 +98,9 @@ const Login = () => {
 
                   <div class="text-center mb-2">
                     Don't have an account?
-                    <a href="#" class="register-link">
+                    <Link to="/register" class="register-link">
                       Register here
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -106,21 +119,33 @@ const Login = () => {
                 <div class="text-center mb-3">or login with</div>
 
                 <div class="row mb-3">
-                  <div class="col-4">
-                    <a href="#" class="btn btn-block btn-social btn-facebook">
-                      facebook
+                  <div style={{ fontSize: '20px' }} class="col-4">
+                    <a href="#" class="btn btn-block btn-facebook">
+                      <i
+                        style={{ fontSize: '50px', color: 'blue' }}
+                        class="fa fa-facebook-square btn-facebook"
+                        aria-hidden="true"
+                      ></i>
                     </a>
                   </div>
 
                   <div class="col-4">
-                    <a onClick={handleGoogleLoginRedirect} href="#" class="btn btn-block btn-social btn-google">
-                      google
+                    <a onClick={handleGoogleLoginRedirect} href="#" class="btn btn-block">
+                      <i
+                        style={{ fontSize: '50px', color: 'goldenrod' }}
+                        class="fa fa-google btn-google"
+                        aria-hidden="true"
+                      ></i>
                     </a>
                   </div>
 
                   <div class="col-4">
-                    <a href="#" class="btn btn-block btn-social btn-twitter">
-                      twitter
+                    <a href="#" class="btn btn-block">
+                      <i
+                        style={{ fontSize: '50px', color: '#2eb7e5' }}
+                        class="fa fa-twitter-square  btn-twitter"
+                        aria-hidden="true"
+                      ></i>
                     </a>
                   </div>
                 </div>

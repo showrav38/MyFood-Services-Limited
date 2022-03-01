@@ -8,6 +8,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin: 0;
+  /* margin-right: 0; */
 }
 .title {
   color: white;
@@ -25,7 +27,12 @@
   position: relative;
 }
 
-
+@media only screen and (max-width:768px) {
+  .title{
+    font-size: 30px;
+    
+  }
+}
 /* .textColor{
     color:rgb(18, 19, 17);
   }

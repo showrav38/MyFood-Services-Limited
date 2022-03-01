@@ -70,7 +70,7 @@ const More = () => {
               <Col xs={12} md={12} className="p-2">
                 <h2> Running Offer(30% OFF)</h2>
                 <div className="container inner">
-                  <a href="#">
+                  <a className='imgal' href="#">
                     <img
                       className="paddingImg"
                       src="https://northcentralhealthdistrict.org/wp-content/uploads/2013/09/food-banner.jpg"

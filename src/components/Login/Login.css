@@ -46,7 +46,7 @@
 
 .titles {
   margin-bottom: 1rem;
-  color: #0069d9;
+  color: rgb(255, 115, 0);
 }
 
 .form-input {
@@ -70,7 +70,7 @@
   position: absolute;
   top: 10px;
   padding-left: 15px;
-  color: #007bff;
+  color: rgb(255, 115, 0);
 }
 
 .form-input input::placeholder {
@@ -80,7 +80,7 @@
 
 .form-input input:focus,
 .form-input input:valid {
-  border: 2px solid #007bff;
+  border: 2px solid rgb(255, 115, 0);
 }
 
 .form-input input:focus::placeholder {
@@ -88,7 +88,7 @@
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #007bff !important;
+  background-color: rgb(255, 115, 0) !important;
   border: 0px;
 }
 
@@ -97,7 +97,7 @@
   border: none;
   cursor: pointer;
   border-radius: 50px;
-  background: #007bff;
+  background: rgb(255, 115, 0);
   /* color: #fff; */
   font-size: 90%;
   font-weight: bold;
@@ -112,7 +112,7 @@
 
 .forget-link,
 .register-link {
-  color: #007bff;
+  color: rgb(255, 115, 0);
   font-weight: bold;
 }
 
@@ -128,26 +128,27 @@
   font-weight: bold;
 }
 
-.form-box .btn-facebook {
-  background: #4866a8;
-}
+/* .form-box .btn-facebook {
+  background: #024ef2;
+} */
 
-.form-box .btn-google {
-  background: #da3f34;
-}
+/* .form-box .btn-google {
+  background: #008deb;
+} */
 
-.form-box .btn-twitter {
+/* .form-box .btn-twitter {
   background: #33ccff;
-}
+} */
 
 .form-box .btn-facebook:hover {
-  background: #3d578f;
+  /* background: #3d578f; */
+  color: #0d76e8ab !important;
 }
 
 .form-box .btn-google:hover {
-  background: #bf3b31;
+  color: #bf3b31 !important;
 }
 
 .form-box .btn-twitter:hover {
-  background: #2eb7e5;
+  color: #16f02f !important;
 }

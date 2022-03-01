@@ -10,7 +10,7 @@
 .btn-position {
   position: absolute;
   bottom: 5px;
-  left: 29%;
+  left: 33%;
   background-color: rgb(255, 115, 0) !important;
   color: white;
   /* top: 50%; */
@@ -36,7 +36,7 @@
 .hhh {
   height: 720px !important;
 }
-.hovs button:hover{
+.hovs button:hover {
   background-color: white !important;
   color: rgb(255, 115, 0) !important;
   border: 1px solid rgb(255, 115, 0) !important;
@@ -46,8 +46,27 @@
     padding: 0px;
   }
 }
-@media only screen and (min-width: 689px) and (max-width: 991px) {
+
+@media only screen and (min-width: 320px) and (max-width:500px) {
+  .heg {
+    width: 90% !important;
+    /* margin-left: -36px; */
+
+    height: 630px !important;
+  }
+  .hovs{
+    margin-left: -7px !important;
+  }
+  .ress{
+    font-size: 20px;
+    left: 62px !important;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
   .resPadd {
     padding: 0px;
+  }
+  .heg {
+    height: 630px !important;
   }
 }

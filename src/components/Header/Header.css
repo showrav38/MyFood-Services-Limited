@@ -1,16 +1,21 @@
-.header{
-    padding: 20px;
-    background-color:#212529;
+.header {
+  padding: 20px;
+  background-color: #212529;
 }
-#textMain{
-    color:rgb(255,115,0);
-  }
-  .textExtra{
-      color:white;
-  }
+#textMain {
+  color: rgb(255, 115, 0);
+}
+.textExtra {
+  color: white;
+}
 
-  .service-container{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr)};
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
 
-   
+@media only screen and (min-width: 300px) and (max-width: 1024px) {
+  .logg{
+      font-size: 20px !important;
+  }
+}
