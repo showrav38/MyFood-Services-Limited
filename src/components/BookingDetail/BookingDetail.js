@@ -58,41 +58,38 @@ const BookingDetail = props => {
     e.preventDefault();
   };
   return (
-    <div>
+    <div className='fon'>
       <div>
         <Col className="mx-auto my-5 py-5">
           <Card
             className="resPaddN"
             style={{
               fontSize: 'larger',
-              backgroundColor: '#A3CFF9',
+              backgroundColor: '#ffff',
+              borderRadius:'none'
             }}
           >
             <Card.Img
               className="img-fluid mx-auto"
-              style={{ height: '30vh', width: '40vw' }}
+              style={{ height: '40vh', width: '40vw',marginTop:'40px',opacity:'1',borderRadius:'10px' }}
               variant="top"
               src={img}
             />
             <Card.Body>
               <Card.Title className="bg-white fw-bold">{name}</Card.Title>
-              <Card.Title style={{ color: 'goldenrod', fontWeight: 'bold' }}>
+              <Card.Title style={{ color: 'goldenrod', fontWeight: 'bold',borderRadius:'none' }}>
                 Price: {price} BDT{' '}
               </Card.Title>
-              <Card.Title>Made In: {madeIn}</Card.Title>
-              <Card.Title>Milage: {milage} KPM</Card.Title>
-              <Card.Title>Model: {mode}</Card.Title>
-              <br />
-              <Card.Title>Release: {released}</Card.Title>
-              <br />
-              <Card.Text style={{ fontWeight: 'bold', width: '300px' }}>{description}</Card.Text>
-              <div className="bg-secondary bg-opacity-50">
-                <Card.Text style={{ fontWeight: 'bold', width: '300px' }}>
-                  User Name <br />
+              <Card.Text style={{ fontWeight: 'bold', width: '300px',textAlign:'center',margin:'0 auto' }}>{description}</Card.Text>
+              <br/>
+              <div className="bg-warning bg-opacity-50">
+                <Card.Text style={{ fontWeight: 'bold', width: '300px',display:'inline' }}>
+                  User Name:
                   <span className="text-white"> {user.displayName}</span>
+                  <br/>
                 </Card.Text>
-                <Card.Text style={{ fontWeight: 'bold', width: '300px' }}>
-                  User email <br />
+                <Card.Text style={{ fontWeight: 'bold', width: '300px',display:'inline' }}>
+                  User email:
                   <span className="text-white">{user.email}</span>
                 </Card.Text>
               </div>

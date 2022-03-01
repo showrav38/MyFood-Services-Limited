@@ -16,7 +16,7 @@
     transform: translate(-50%, -50%);
   }
   img {
-    opacity: .80;
+    opacity: 1;
   }
 
   @media only screen and (max-width:688px) {

@@ -6,11 +6,11 @@ import './More.css';
 const More = () => {
   return (
     <div id="more" className="margin">
-      <h2 className="p-5">Premium Services</h2>
+      <h2 className="p-5 text-C">Give Feedback and Get 30% Discount</h2>
       <Container className="p-3">
         <Row>
           <Col xs={12} md={6}>
-            <h2 className="text-C pb-4">Feed Back Zone</h2>
+            <h2 className="pb-4">Give Your Feedback</h2>
             <form className=" text-dark row g-3">
               <div className="col-md-6">
                 <label htmlFor="inputName4" className="form-label">
@@ -66,18 +66,20 @@ const More = () => {
             </form>
           </Col>
           <Col xs={12} md={6} style={{ backgroundColor: '' }}>
-            <Row className=" text-C b-4">
+            <Row className=" b-4">
               <Col xs={12} md={12} className="p-2">
                 <h2> Running Offer(30% OFF)</h2>
                 <div className="container inner">
-                  <img
-                    className="paddingImg"
-                    src="https://northcentralhealthdistrict.org/wp-content/uploads/2013/09/food-banner.jpg"
-                    alt="Snow"
-                    width="450px"
-                    height="400px"
-                    style={{opacity:'100',borderRadius:'30px',overflow:'hidden'}}
-                  />
+                  <a href="#">
+                    <img
+                      className="paddingImg"
+                      src="https://northcentralhealthdistrict.org/wp-content/uploads/2013/09/food-banner.jpg"
+                      alt="Snow"
+                      width="400px"
+                      height="350px"
+                      style={{ opacity: '100', borderRadius: '30px', overflow: 'hidden' }}
+                    />
+                  </a>
                 </div>
               </Col>
             </Row>

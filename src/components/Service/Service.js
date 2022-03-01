@@ -32,9 +32,18 @@ const Service = props => {
         <p>{description}</p>
         {/* <p>Learning Level: {topInnovation}</p> */}
         <h4 className="mb-5">Price: {price}</h4>
-        <div className="d-flex justify-content-center my-auto btn-position">
-          <Link to={`/booking/${_id}`}>
-            <Button variant="primary">Order Details</Button>{' '}
+        <div
+          className="hovs d-flex justify-content-center my-auto btn-position"
+          style={{ borderRadius: '4px' }}
+        >
+          <Link className="hovs" to={`/booking/${_id}`}>
+            <Button
+              className="hovs"
+              style={{ backgroundColor: 'rgb(255, 115, 0)', color: 'white', border: 'none' }}
+              variant="primary"
+            >
+              Order Details
+            </Button>{' '}
           </Link>
         </div>
       </div>
