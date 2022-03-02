@@ -1,11 +1,34 @@
 import { Button, Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import { HashLink } from 'react-router-hash-link';
+import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const { user, logOut } = useAuth();
+
+  // const { signInUsingEmailandPassword, user, error, setUser, setError, loading, setLoading } =
+  //   useAuth();
+
+  // taking location for redirecting
+  const location = useLocation();
+  const redirect_url = location.state?.from || '/home';
+
+  const history = useHistory();
+
+  const handleLogoutRedirect = () => {
+    logOut()
+      .then(result => {
+        // console.log(result);
+        // setUser(result.user);
+        history.push(redirect_url);
+      })
+      .finally(() => {
+        // setLoading(false);
+      });
+  };
+
   return (
     <div>
       <Navbar
@@ -42,7 +65,7 @@ const Header = () => {
             </Nav.Link>
 
             {user?.displayName ? (
-              <div class="container">
+              <div class="container"style={{marginLeft: '-18px'}}>
                 <div class="row">
                   <div class="col">
                     <Nav.Link
@@ -89,7 +112,7 @@ const Header = () => {
                   <div class="col">
                     <Button
                       style={{ marginTop: '30px', textDecoration: 'none', fontWeight: 'normal' }}
-                      onClick={logOut}
+                      onClick={handleLogoutRedirect}
                       variant="light"
                     >
                       Logout
@@ -114,12 +137,12 @@ const Header = () => {
                 Login
               </NavLink>
             )}
-            <Navbar.Text style={{width:'30%'}}>
+            <Navbar.Text style={{ width: '30%' }}>
               {user.displayName && (
                 <a
                   href="/login"
                   style={{
-                    margin: '10px',
+                    margin: '-38px',
                     textDecoration: 'none',
                     fontWeight: 'normal',
                     color: 'white',

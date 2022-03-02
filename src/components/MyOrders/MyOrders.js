@@ -39,10 +39,12 @@ const MyOrders = () => {
   };
 
   return (
-    <div className="pt-4 bt-4 mt-4 fw-bolder bccol">
-      <h2 className="pt-4 bt-4 mt-4 ">My Orders</h2>
-      {/* <ul className="list-group "> */}
-      <table className="table w-75 mx-auto">
+    <div className="pt-4 bt-4 mt-4 fw-bolder">
+      <h2 className="pt-4 bt-4 mt-4">Manage Order</h2>
+
+      <div className='row container' style={{width:'100% !important',padding:'0',margin:'0 auto'}}>
+        <div className='col-md-12'>
+        <table className="table table-responsive-sm mx-auto ">
         <thead>
           <tr>
             <th scope="col">Name</th>
@@ -51,31 +53,28 @@ const MyOrders = () => {
             <th scope="col">Delete</th>
           </tr>
         </thead>
-        {myOrder.map(
-          order => (
-            <tbody key={order._id}>
-              <tr className="table-primary">
-                <td>{order.name}</td>
-                <td>{order.price}</td>
-                <td>{order.orderStatus}</td>
-                <td>
+        {myOrder.map(order => (
+          <tbody key={order._id}>
+            <tr className="table-primary">
+              <td>{order.name}</td>
+              <td>{order.price}</td>
+              <td>{order.orderStatus}</td>
+              <td>
+                {' '}
+                <button className="m-3 bg-warning" onClick={() => handleDeleteUser(order._id)}>
                   {' '}
-                  <button className="m-3 bg-warning" onClick={() => handleDeleteUser(order._id)}>
-                    {' '}
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          )
-
-          // <li className="list-group-item list-group-item-primary" key={order._id}>Food name: {order.name}.....||.....Price: {order.price}.....||.....Order Status: {order.orderStatus}
-          //     <button className="m-3 bg-warning" onClick={() => handleDeleteUser(order._id)} > Delete</button></li>
-        )}
-        {/* </ul> */}
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        ))}
       </table>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default MyOrders;
+

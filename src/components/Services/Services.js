@@ -12,7 +12,7 @@ const Services = () => {
     return (
         <div id="DoctorServices" className="backgroundServices">
             <div>
-                <h2 className="p-5 textCol">Delivery Food Services </h2>
+                <h2 className="p-5 textCol"style={{color:'rgb(255, 115, 0)'}}>Delivery Food Services </h2>
                 <div className="service-container">
                     {
                         services.length === 0 ?

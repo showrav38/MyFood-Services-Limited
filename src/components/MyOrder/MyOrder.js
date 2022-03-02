@@ -42,7 +42,7 @@ const MyOrders = () => {
     <div className="pt-4 bt-4 mt-4 fw-bolder table-responsive">
       <h2 className="pt-4 bt-4 mt-4 ">My Orders</h2>
       {/* <ul className="list-group "> */}
-      <table className="table w-75 mx-auto">
+      <table className="table table-responsive w-75 mx-auto ">
         <thead>
           <tr>
             <th scope="col">Food Name</th>
@@ -74,6 +74,7 @@ const MyOrders = () => {
           // <li className="list-group-item list-group-item-primary" key={order._id}>Food name: {order.name}.....||.....Price: {order.price}.....||.....Order Status: {order.orderStatus}
           //     <button className="m-3 bg-warning" onClick={() => handleDeleteUser(order._id)} > Delete</button></li>
         )}
+        </table>
         {/* </ul> */}
     </div>
   );

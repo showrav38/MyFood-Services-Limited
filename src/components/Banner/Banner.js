@@ -11,7 +11,7 @@ const Banner = () => {
         <div className="">
           <div className="row d-flex banner align-items-center justify-content-center">
             <div className="container">
-              <div className="col-md-8 text-center">
+              <div className="col-md-12 text-center">
                 {/* Banner Header */}
                 <h1 className="title">
                   MyFood Services Limited<br />

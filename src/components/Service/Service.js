@@ -46,13 +46,13 @@ const Service = props => {
           Price: {price}Tk
         </h4>
         <div
-          className="hovs d-flex justify-content-center my-auto btn-position"
-          style={{ borderRadius: '4px' }}
+          className="hovs d-flex justify-content-center btn-position"
+          style={{ borderRadius: '4px',margin: '-21px 0' }}
         >
           <Link className="hovs" to={`/booking/${_id}`}>
             <Button
               className="hovs"
-              style={{ backgroundColor: 'rgb(255, 115, 0)', color: 'white', border: 'none' }}
+              style={{ backgroundColor: 'rgb(255, 115, 0)', color: 'white', border: 'none', }}
               variant="primary"
             >
               Order Details

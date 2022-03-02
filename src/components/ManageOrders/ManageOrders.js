@@ -65,7 +65,7 @@ const ManageOrders = () => {
     <div className="pt-4 bt-4 mt-4 fw-bolder table-responsive">
       <h2 className="pt-4 bt-4 mt-4">Manage Order</h2>
 
-      <table className="table w-75 mx-auto  ">
+      <table className="table table-responsive w-75 mx-auto  ">
         <thead>
           <tr>
             <th scope="col">Food Name</th>

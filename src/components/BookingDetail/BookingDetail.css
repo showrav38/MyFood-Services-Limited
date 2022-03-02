@@ -4,7 +4,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.resPaddN{
-   margin: auto;
-  
+.resPaddN {
+  margin: auto;
+}
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  input {
+    width: 239px !important;
+    margin: 0 auto !important;
+    margin-left: -56px !important;
+  }
 }

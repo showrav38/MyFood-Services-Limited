@@ -7,7 +7,7 @@ const About = () => {
     <div id="about" className="p-5 fon">
       <Container className="p-3">
         <Row>
-          <Col className='wee' xs={12} md={6}>
+          <Col className="wee" xs={12} md={6}>
             <iframe
               width="560"
               height="315"
@@ -19,12 +19,16 @@ const About = () => {
             ></iframe>
           </Col>
           <Col xs={12} md={6}>
-            <h2 className="text-C text-center">Our Goal</h2>
-            <p className="textP">
-              Our goal is to provide sustainable and effective food delivery service by follwing
-              these 3 targets are like appropriate access in the site for necessary food delivery
-              services , assurance of quality workforce, services and acceptable cost to public
-            </p>
+            <div className='textPs textPP'>
+              <h3 style={{ color: 'rgb(247, 109, 11)', fontSize: '33px' }}>Our Goal</h3>
+              <p style={{ lineHeight: '28px' }}>
+                Interested in working with us? Occasionally we create sponsored posts for brands
+                that are a good fit for I am a Food Blog. We’re also available for recipe
+                development & photography. Interested in working with us? Occasionally we create
+                sponsored posts for brands that are a good fit for I am a Food Blog. We’re also
+                available for recipe development & photography.
+              </p>
+            </div>
           </Col>
         </Row>
       </Container>

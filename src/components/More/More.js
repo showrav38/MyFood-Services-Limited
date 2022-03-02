@@ -77,7 +77,7 @@ const More = () => {
                       alt="Snow"
                       width="400px"
                       height="350px"
-                      style={{ opacity: '100', borderRadius: '30px', overflow: 'hidden' }}
+                      style={{ opacity: '100', borderRadius: '30px', overflow: 'hidden',marginRight:'30px',marginLeft:'-14px' }}
                     />
                   </a>
                 </div>
